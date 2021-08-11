@@ -1,0 +1,30 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'hello'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// 아래는 기본적으로 들어가는 test라이브러리이다. 
+	// 이런 라이브러리를 받을 수 있는 곳이 mavenCentral이다. 이게 repositories에 적혀있다. 
+	testImplementation ('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'juni-vinatage-engine'
+	}
+}
+
+
+
+test {
+	useJUnitPlatform()
+}

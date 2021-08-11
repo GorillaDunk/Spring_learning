@@ -1,0 +1,14 @@
+<!-- 타임리프의 장점은 경로만 알고 그 경로를 브라우저에 타입해보면 그 껍데기를 볼 수 있다는 것이다.
+파일을 우클릭해서 copy path에 absolute path를 누른후 브라우저 주소창에 넣어주기  -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--아래와 같이 치면 p태그 안에 내용이 th:text 다음 내용으로 치환이된다. p태그 안의 내용은 현재 상황에서는 의미가 없는것다.-->
+<p th:text="'hello. '+ ${name}" >hello! empty</p>
+
+</body>
+</html>
